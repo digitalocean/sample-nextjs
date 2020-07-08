@@ -2,61 +2,55 @@
 
 These steps will get this sample application running for you using DigitalOcean.
 
-**Note: Following these steps will result in charges for the use of DigitalOcean Droplets**
+**Note: Following these steps will result in charges for the use of DigitalOcean services**
 
 ## Requirements
 
-* Docker must be [installed locally](https://docs.docker.com/install/) on your machine, unless you choose to build remotely via Github Actions (beyond the scope of this README)
 * You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new
     
+## Forking the Sample App Source Code
 
-## Installing App Sail ##
+To use all the features of App Platform, you need to be running against your own copy of this application. To make a copy, click the Fork button above and follow the on-screen instructions. In this case, you'll be forking this repo as a starting point for your own app (see [Github documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) to learn more about forking repos.
 
-To install the App Sail CLI, visit https://cloud.digitalocean.com/appsail and choose to Create or Launch a new app. Follow the on-screen instructions for installing the CLI.
-
-## Downloading the Sample App Source Code
-
-To download the demo app run in your terminal:
-
-	git clone https://github.com/digitalocean-appsail/sample-nextjs.git
-	cd sample-nextjs
+After forking the repo, you should now be viewing this README in your own github org (e.g. `https://github.com/<your-org>/sample-nextjs`)
 
 ## Deploying the App ##
 
-	sail push
+1. Visit https://cloud.digitalocean.com/apps (if you're not logged in, you may see an error message. Visit https://cloud.digitalocean.com/login directly and authenticate, then try again)
+1. Click "Launch App" or "Create App"
+1. Choose GitHub and authenticate with your GitHub credentials.
+1. Under Repository, choose this repository (e.g. `<your-org>/sample-nextjs`)
+1. On the next two screens, leave all the defaults unchanged.
+1. Click "Launch App"
+1. You should see a "Building..." progress indicator. And you can click "Deployments"→"Details" to see more details of the build.
+1. It can currently take 5-6 minutes to build this app, so please be patient. Live build logs are coming soon to provide much more feedback during deployments.
+1. Once the build completes successfully, click the "Live App" link in the header and you should see your running application in a new tab
 
-It will ask for an auth key if you haven't used the sail CLI before. Retrieve it from [the auth page](https://cloud.digitalocean.com/appsail/auth).
+## Making Changes to Your App ##
 
-Then it will ask how to configure the app.
-Answer the questions as follows:
+As long as you left the default Autodeploy option enabled when you first launched this app, you can now make code changes and see them automatically reflected in your live application. During these automatic deployments, your application will never pause or stop serving request because the App Platform offers zero-downtime deployments.
 
-
-        ✓ Is this app already live (on App Sail)?: No
-        ✓ Name this app : sample-nextjs
-        ✓ Need to set any env variables: No
-        Let's configure your app for deployment:
-        ✓ Choose your configuration preference: Automatic...
-        ✓ Node app detected, is this correct: Yes
-        ✓ Use Node 10: Yes
-        ✓ Do you need a database: No
-
-
-After that, it will go through a deploy process. Once it's done, you can open the live app or administration dashboard by following the links provided by the App Sail CLI once the push is completed.
+Here's an example code change you can make for this app:
+1. Edit [index.js](pages/index.js)
+1. Change `Hello Next.js` to a different greeting.
+1. Commit the change to master. Normally it's a better practice to create a new branch for your change and then merge that branch to master after review, but for this demo you can commit to master directly.
+1. Visit https://cloud.digitalocean.com/apps and navigate to your sample-nextjs app.
+1. You should see a "Building..." progress indicator, just like above.
+1. Once the build completes successfully, click the "Live App" link in the header and you should see your updated application running. You may need to force refresh the page in your browser (e.g. using Shift+Reload).
 
 ## Learn More ##
 
-You can learn more about App Sail and how to manage and update your application at https://www.digitalocean.com/docs/appsail/.
+You can learn more about the App Platform and how to manage and update your application at https://www.digitalocean.com/docs/apps/.
 
 
 ## Deleting the App #
 
 When you no longer need this sample application running live, you can delete it by following these steps:
-1. Visit the app dashboard at https://cloud.digitalocean.com/appsail
+1. Visit the Apps control panel at https://cloud.digitalocean.com/apps
 1. Navigate to the sample-nextjs app
-1. Choose "App Config"->"Show More"
-1. Select "Delete", type your app's name, and click "Delete App".
+1. Choose "Settings"->"Destroy"
 
-This will delete the app and destroy any underlying DigitalOcean Droplets. 
+This will delete the app and destroy any underlying DigitalOcean resources
 
-**Note: If you don't delete your app, charges for the use of DigitalOcean Droplets will continue to accrue. Also, even if you delete your app, a new push to your sample-nodejs repo on Github will trigger a new deploy which will result in DigitalOcean charges.**
+**Note: If you don't delete your app, charges for the use of DigitalOcean services will continue to accrue.**
 

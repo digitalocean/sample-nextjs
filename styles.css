@@ -1,0 +1,14 @@
+.gradient {
+	background: -webkit-linear-gradient(#a82ce8, #3cd1f0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+main {
+	text-align: center;
+	margin: 1.25rem 1rem 1.5rem 1rem;
+}
+
+body {
+	font-family: Helvetica Neue,Helvetica,Lucida Grande,Segoe UI,Roboto,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}

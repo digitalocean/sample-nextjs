@@ -1,7 +1,7 @@
 const Index = () => (
-  <div>
-    <p>Hello Next.js</p>
-  </div>
+  <main>
+    <h1 class="gradient">Hello Next.js!</h1>
+  </main>
 );
 
 export default Index;

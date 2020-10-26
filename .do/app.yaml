@@ -1,9 +1,0 @@
-name: sample-nextjs
-services:
-- build_command: npm run build
-  environment_slug: node-js
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: digitalocean/sample-nextjs
-  name: sample-nextjs

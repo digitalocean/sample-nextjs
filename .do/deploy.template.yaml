@@ -1,0 +1,9 @@
+spec:
+  name: sample-nextjs
+  services:
+  - build_command: npm run build
+    environment_slug: node-js
+    git:
+      branch: main
+      repo_clone_url: https://github.com/digitalocean/sample-nextjs.git
+    name: sample-nextjs

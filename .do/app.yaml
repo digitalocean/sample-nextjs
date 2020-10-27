@@ -3,7 +3,7 @@ services:
 - build_command: npm run build
   environment_slug: node-js
   github:
-    branch: master
+    branch: main
     deploy_on_push: true
     repo: digitalocean/sample-nextjs
   name: sample-nextjs

@@ -41,7 +41,7 @@ export default function Home() {
         </svg>
 
         <img
-          src="https://images.unsplash.com/photo-1505142468610-359e7d316be0"
+          src="/background.jpg"
           alt="Ocean Image"
           className="lg:absolute object-cover lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
         />

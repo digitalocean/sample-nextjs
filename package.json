@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build && next export -o _static",
-    "start": "node sammy.js; next start -H 0.0.0.0 -p ${PORT:-8080}"
+    "dev": "next dev",
+    "build": "next build && next export -o _static"
   },
   "keywords": [],
   "author": "",

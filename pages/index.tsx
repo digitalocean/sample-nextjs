@@ -1,4 +1,4 @@
-export default function Home() {
+export default () => {
   return (
     <div className="min-h-screen lg:flex text-lg">
       {/* left side */}

@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+}
+
+.links {
+    display: inline-block;
+    padding-left: var(--spacing-sm);
+}

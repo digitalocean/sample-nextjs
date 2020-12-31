@@ -1,9 +1,10 @@
-import { Layout } from '../components'
+import { Button, Layout } from '../components'
 
 export default function Home() {
     return (
         <Layout>
-            <p>Hello</p>
+            <h1>Home</h1>
+            <Button>Hello</Button>
         </Layout>
     )
 }

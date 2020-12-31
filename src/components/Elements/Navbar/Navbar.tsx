@@ -1,0 +1,28 @@
+import * as React from 'react'
+import Link from 'next/link'
+
+import { toCapitalize } from '../../../lib/util'
+
+const pages = [{ link: 'work' }, { link: 'inspiration' }, { link: 'about' }, { link: 'contact' }]
+
+export const Navbar: React.FC = React.memo(
+    (): JSX.Element => {
+        const generateLinks = () =>
+            pages.map(({ link }) => {
+                return (
+                    <li key={link}>
+                        <Link href={`/${link}`}>
+                            <a>{toCapitalize(link)}</a>
+                        </Link>
+                    </li>
+                )
+            })
+
+        return (
+            <nav>
+                <header>Logo</header>
+                <ul>{generateLinks()}</ul>
+            </nav>
+        )
+    }
+)

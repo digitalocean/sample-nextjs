@@ -1,0 +1,5 @@
+.links {
+    color: var(--black);
+    display: inline;
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}

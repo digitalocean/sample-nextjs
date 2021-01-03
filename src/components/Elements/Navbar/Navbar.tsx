@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { toCapitalize } from '../../../lib/util'
 import styles from './Navbar.module.css'
 
-const pages = [{ link: 'work' }, { link: 'inspiration' }, { link: 'about' }, { link: 'contact' }]
+const pages = [{ link: 'about' }]
 
 export const Navbar: React.FC = React.memo(
     (): JSX.Element => {
@@ -18,7 +18,7 @@ export const Navbar: React.FC = React.memo(
             ))
 
         return (
-            <nav className={styles.grid}>
+            <nav className="container flex">
                 <header>
                     <Link href="/">
                         <a>Logo</a>

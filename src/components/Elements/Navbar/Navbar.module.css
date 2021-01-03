@@ -1,9 +1,5 @@
-.grid {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-}
-
 .links {
-    display: inline-block;
-    padding-left: var(--spacing-sm);
+    color: var(--black);
+    display: inline;
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }

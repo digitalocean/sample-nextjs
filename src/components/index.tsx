@@ -1,4 +1,6 @@
 export * from './Elements/Button/Button'
+export * from './Elements/Footer/Footer'
+export * from './Elements/Icon/Icon'
 export * from './Elements/Layout/Layout'
 export * from './Elements/Navbar/Navbar'
 export * from './Elements/Project/Project'

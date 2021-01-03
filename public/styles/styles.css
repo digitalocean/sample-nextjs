@@ -198,7 +198,7 @@ template {
     --background: var(--pink);
     --buttonTextColor: var(--black);
     --headerBackground: var(--black);
-    --headerColor: var(--white);
+    --headerColor: var(--black);
     --lineColor: var(--black);
     --paragraphText: var(--lightGrey);
     --primary: var(--green);
@@ -342,35 +342,37 @@ blockquote {
 }
 
 hr {
-    border-top: var(--line);
+    border: var(--line);
+    width: 25%;
+    float: left;
 }
 
-button {
+.button {
     --buttonColor: transparent;
     appearance: none;
     color: var(--buttonTextColor);
     background-color: var(--buttonColor);
     border: var(--line);
-    padding: var(--spacing-sm) 25px;
+    padding: var(--spacing-sm) 10px;
     box-shadow: var(--level-1);
     cursor: pointer;
     transition: 0.3s ease-in-out box-shadow;
 }
 
-button:hover {
+.button:hover {
     box-shadow: var(--level-3);
 }
 
-button[disabled] {
+.button[disabled] {
     opacity: 0.4;
 }
 
-button.secondary {
+.button.secondary {
     --buttonColor: var(--white);
     --buttonTextColor: var(--black);
 }
 
-button.small {
+.button.small {
     font-size: var(--smallText);
 }
 

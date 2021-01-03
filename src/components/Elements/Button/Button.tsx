@@ -2,9 +2,13 @@ import * as React from 'react'
 
 export type ButtonProps = {
     children: React.ReactNode
-    onClickFunc?: any
+    link?: string
 }
 
 export const Button: React.FC = React.memo(
-    ({ children, onClickFunc }: ButtonProps): JSX.Element => <button onClick={() => onClickFunc}>{children}</button>
+    ({ children, link }: ButtonProps): JSX.Element => (
+        <a href={link} className="button">
+            {children}
+        </a>
+    )
 )

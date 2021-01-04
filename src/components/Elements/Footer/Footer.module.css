@@ -1,0 +1,29 @@
+.footer {
+    text-align: left;
+    background-color: var(--green);
+    min-height: 200;
+}
+
+.footer h3 {
+    margin: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.icon {
+    margin-right: 50px;
+    padding: var(--spacing-xs);
+}
+
+.wrapper {
+    padding: var(--spacing-lg) 0;
+}
+
+.iconWrapper {
+    display: flex;
+    height: 100%;
+}
+
+.iconWrapper svg {
+    align-self: flex-end;
+    display: inline-block;
+}

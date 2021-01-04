@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { Button } from '../Button/Button'
+import styles from './Project.module.css'
 
 export type ProjectProps = {
     backgroundImageSrc: string
@@ -18,7 +19,7 @@ export type ProjectProps = {
 export const Project: React.FC = React.memo(
     ({
         headerImageSrc,
-        backgroundImageSrc,
+        backgroundImageSrc = 'https://source.unsplash.com/random',
         role,
         catchDesc,
         description,
@@ -26,17 +27,23 @@ export const Project: React.FC = React.memo(
         projectName
     }: ProjectProps): JSX.Element => {
         return (
-            <section style={{ backgroundImage: `url(${backgroundImageSrc})` }} className="container">
-                <header>
-                    <img src={headerImageSrc} alt={projectName} />
-                </header>
+            <section
+                style={{ backgroundImage: `url(${backgroundImageSrc})` }}
+                className={`container ${styles.section}`}
+            >
+                <div className={styles.ParallaxContainer}>
+                    <header>
+                        <img src={headerImageSrc} alt={projectName} />
+                    </header>
 
-                <h5>{role}</h5>
-                <h2>{catchDesc}</h2>
+                    <h5>{role}</h5>
 
-                <p>{description}</p>
+                    <h2>{catchDesc}</h2>
 
-                <Button link={caseLink}>View Case Study</Button>
+                    <p>{description}</p>
+
+                    <Button link={caseLink}>View Case Study</Button>
+                </div>
             </section>
         )
     }

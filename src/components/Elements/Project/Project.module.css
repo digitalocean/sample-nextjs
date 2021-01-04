@@ -1,0 +1,5 @@
+.section {
+    min-height: 200;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+}

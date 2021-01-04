@@ -34,20 +34,33 @@ const projects = [
 
 export default function Home() {
     const projectSection = projects.map(project => <Project key={project.projectName} {...project} />)
+
+    const iconList = ['linkedin', 'github', 'mail'].map(icon => (
+        <Icon icon={icon} key={icon} style={{ marginRight: 20 }} className="" />
+    ))
+
     return (
         <Layout>
-            <header className="container">
-                <h1>{'Victoria is a UX/UI Designer \n Who loves to make dreams into reality'}</h1>
-                <hr />
-                <br />
+            <section className="showcase">
+                <div className="video-container">
+                    <img
+                        src="https://i.pinimg.com/originals/76/09/46/7609468e97e15d1da8d14d534be7366c.gif"
+                        alt="hero"
+                    />
+                </div>
 
-                <p>I do UI & UX Design, and User Experience Research</p>
-                <p>Currently am a Intern as a UX Designer for Smarsh</p>
+                <header className="container content">
+                    <h1>Victoria is a UX/UI Designer</h1>
+                    <h1>Who loves to make dreams into reality</h1>
+                    <hr />
+                    <br />
 
-                <Icon icon="linkedin" />
-                <Icon icon="github" />
-                <Icon icon="mail" />
-            </header>
+                    <p>I do UI & UX Design, and User Experience Research</p>
+                    <p>Currently am a Intern as a UX Designer for Smarsh</p>
+
+                    {iconList}
+                </header>
+            </section>
 
             {projectSection}
         </Layout>

@@ -27,13 +27,20 @@ export type IconProps = {
     className?: string
     icon: string
     size?: string
+    style?: any
 }
 
 export const Icon: React.FC = React.memo(
-    ({ className, icon, size = 'sm' }: IconProps): JSX.Element => {
+    ({ className, icon, size = 'sm', style = {} }: IconProps): JSX.Element => {
         const paths = icons[icon].map(iconPath => <path d={iconPath} key={iconPath} fill="#2D2C2C" />)
         return (
-            <svg width={iconHeights[size]} height={iconHeights[size]} viewBox="0 0 1024 1024" className={className}>
+            <svg
+                width={iconHeights[size]}
+                height={iconHeights[size]}
+                style={style}
+                viewBox="0 0 1024 1024"
+                className={className}
+            >
                 {paths}
             </svg>
         )

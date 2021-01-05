@@ -1,5 +1,17 @@
 .links {
     color: var(--black);
-    display: inline;
     font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+    list-style: none;
+}
+
+.linkContainer {
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding: var(--spacing-sm) 0;
 }

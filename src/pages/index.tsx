@@ -2,31 +2,47 @@ import { Icon, Layout, Project } from '../components'
 
 const projects = [
     {
-        backgroundImageSrc: 'placeholder',
-        caseLink: 'placeholder',
+        backgroundImageSrc: '/images/backgrounds/kittybeans.png',
+        caseLink: '',
         catchDesc: 'Seamless and Effortless \n Design for Manga readers to \n finally enjoy.',
         description: 'For my first project as a solo designer did the end-to-end user experience process.',
-        headerImageSrc: 'placeholder',
+        headerImage: {
+            alt: 'springboard_logo',
+            height: 80,
+            src: '/images/logos/logo_springboard.png',
+            width: 336
+        },
         projectName: 'KittyBeans',
         role: 'Lead UX/UI Designer'
     },
     {
-        backgroundImageSrc: 'placeholder',
-        caseLink: 'placeholder',
+        backgroundImageSrc: '/images/backgrounds/citypups.png',
+        caseLink: '',
         catchDesc: 'Having issues looking for your \n next bestfriend in the city? \n Look no further.',
         description:
             'Participated in a 5 day Design Sprint  created problem statement, sketches, wireframes, prototyping, and conducting usability testing.',
-        headerImageSrc: 'placeholder',
+        headerImageSrc: '/images/logos/logo_citypup.png',
+        headerImage: {
+            alt: 'citypups_logo',
+            height: 80,
+            src: '/images/logos/logo_citypup.png',
+            width: 727
+        },
         projectName: 'CityPups',
         role: 'Lead UI Designer'
     },
     {
-        backgroundImageSrc: 'placeholder',
-        caseLink: 'placeholder',
+        backgroundImageSrc: '/images/backgrounds/zoom.png',
+        caseLink: '',
         catchDesc: 'Creating zoom to be more \n accessible for students and \n teachers.',
         description:
             'Participated in a 2-week Design Challenge. Help managed 3 UX designers, conducted research, interviews, usability tests, created personas, and low-fidelity wireframes.',
-        headerImageSrc: 'placeholder',
+        headerImage: {
+            alt: 'iterate_ux_logo',
+            height: 97,
+            src: '/images/logos/logo_iterate_ux.png',
+            width: 661
+        },
         projectName: 'ZoomApp',
         role: 'Product Manager and UX/UI Designer'
     }

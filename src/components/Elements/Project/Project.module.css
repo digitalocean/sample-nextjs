@@ -1,5 +1,27 @@
 .section {
-    min-height: 200;
-    padding-top: var(--spacing-sm);
-    padding-bottom: var(--spacing-sm);
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    position: relative;
+    text-align: left;
+}
+
+.coverImage {
+    z-index: -1;
+}
+
+.projectContainer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.projectContent {
+    display: inline-block;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .projectContainer {
+        display: grid;
+        grid-template-columns: 100%;
+    }
 }

@@ -180,7 +180,7 @@ template {
 /**
  * Base Styles
  */
-@import url('https://fonts.googleapis.com/css?family=Rubik:400|Karla:400');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300');
 
 :root {
     /* Define Colors as colors */
@@ -205,12 +205,13 @@ template {
     --textColor: var(--black);
 
     /* Styles */
-    --line: solid 1px var(--lineColor);
+    --line: solid 2px var(--lineColor);
 
     /* Type */
-    --headingFont: 'Rubik', sans-serif;
-    --bodyFont: 'Karla', sans-serif;
+    --headingFont: 'Poly';
+    --bodyFont: 'Open Sans';
     --baseFontSize: 100%;
+    --paragraphText: 1.5em;
     --h1: 3.052em;
     --h2: 2.441em;
     --h3: 1.953em;
@@ -281,7 +282,9 @@ footer p {
 }
 
 p {
-    margin-bottom: 1.15rem;
+    font-family: var(--bodyFont);
+    font-size: var(--paragraphText);
+    line-height: 1.5;
     max-width: 40em;
 }
 
@@ -301,11 +304,11 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 2.75rem 0 1.05rem;
+    color: var(--headerColor);
     font-family: var(--headingFont);
     font-weight: 400;
     line-height: 1.15;
-    color: var(--headerColor);
+    margin: 2.75rem 0 1.05rem;
 }
 
 h1 {
@@ -376,26 +379,8 @@ nav {
     opacity: 0.4;
 }
 
-.button.secondary {
-    --buttonColor: var(--white);
-    --buttonTextColor: var(--black);
-}
-
-.button.small {
-    font-size: var(--smallText);
-}
-
 .container {
     padding: 0 var(--containerPadding);
-}
-
-.logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
-}
-
-.logo a {
-    cursor: pointer;
 }
 
 .tc {

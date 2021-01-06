@@ -2,13 +2,15 @@ import * as React from 'react'
 
 export type ButtonProps = {
     children: React.ReactNode
-    link?: string
+    className?: string
+    onMouseEnter?: () => void
+    onMouseLeave?: () => void
 }
 
 export const Button: React.FC = React.memo(
-    ({ children, link }: ButtonProps): JSX.Element => (
-        <a href={link} className="button">
+    ({ children, className, onMouseEnter, onMouseLeave }: ButtonProps): JSX.Element => (
+        <button className={className} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             {children}
-        </a>
+        </button>
     )
 )

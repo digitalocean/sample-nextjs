@@ -359,9 +359,10 @@ nav {
     box-shadow: var(--level-1);
 }
 
-.button {
+button {
     --buttonColor: transparent;
     appearance: none;
+    min-width: 165px;
     color: var(--buttonTextColor);
     background-color: var(--buttonColor);
     border: var(--line);
@@ -371,12 +372,18 @@ nav {
     transition: 0.3s ease-in-out box-shadow;
 }
 
-.button:hover {
+button:hover {
     box-shadow: var(--level-3);
 }
 
-.button[disabled] {
+button[disabled] {
     opacity: 0.4;
+}
+
+.buttonDisabled {
+    color: var(--white);
+    background-color: var(--red);
+    border-color: var(--white);
 }
 
 .container {
@@ -394,15 +401,16 @@ nav {
 }
 
 .showcase {
-    height: 100vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
     color: #fff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
 }
 
 .content {
-    z-index: 2;
+    z-index: 1;
 }
 
 .video-container {
@@ -410,7 +418,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     background-color: var(--white);
 }

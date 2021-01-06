@@ -4,7 +4,7 @@ const projects = [
     {
         backgroundImageSrc: '/images/backgrounds/kittybeans.png',
         caseLink: '',
-        catchDesc: 'Seamless and Effortless \n Design for Manga readers to \n finally enjoy.',
+        catchDesc: 'Seamless and Effortless  Design for Manga readers to finally enjoy.',
         description: 'For my first project as a solo designer did the end-to-end user experience process.',
         headerImage: {
             alt: 'springboard_logo',
@@ -12,13 +12,12 @@ const projects = [
             src: '/images/logos/logo_springboard.png',
             width: 336
         },
-        projectName: 'KittyBeans',
         role: 'Lead UX/UI Designer'
     },
     {
         backgroundImageSrc: '/images/backgrounds/citypups.png',
         caseLink: '',
-        catchDesc: 'Having issues looking for your \n next bestfriend in the city? \n Look no further.',
+        catchDesc: 'Having issues looking for your next bestfriend in the city? Look no further.',
         description:
             'Participated in a 5 day Design Sprint  created problem statement, sketches, wireframes, prototyping, and conducting usability testing.',
         headerImageSrc: '/images/logos/logo_citypup.png',
@@ -28,13 +27,12 @@ const projects = [
             src: '/images/logos/logo_citypup.png',
             width: 727
         },
-        projectName: 'CityPups',
         role: 'Lead UI Designer'
     },
     {
         backgroundImageSrc: '/images/backgrounds/zoom.png',
         caseLink: '',
-        catchDesc: 'Creating zoom to be more \n accessible for students and \n teachers.',
+        catchDesc: 'Creating zoom to be more accessible for students and teachers.',
         description:
             'Participated in a 2-week Design Challenge. Help managed 3 UX designers, conducted research, interviews, usability tests, created personas, and low-fidelity wireframes.',
         headerImage: {
@@ -43,16 +41,23 @@ const projects = [
             src: '/images/logos/logo_iterate_ux.png',
             width: 661
         },
-        projectName: 'ZoomApp',
         role: 'Product Manager and UX/UI Designer'
     }
 ]
 
 export default function Home() {
-    const projectSection = projects.map(project => <Project key={project.projectName} {...project} />)
+    const projectSection = projects.map(project => <Project key={project.description.trim()} {...project} />)
 
-    const iconList = ['linkedin', 'github', 'mail'].map(icon => (
-        <Icon icon={icon} key={icon} style={{ marginRight: 20 }} className="" />
+    const icons = [
+        { icon: 'linkedin', link: 'https://www.linkedin.com/in/victoria-bigsby/' },
+        { icon: 'github', link: 'https://github.com/VBigsby' },
+        { icon: 'mail', link: 'mailto:vtbigsby@gmail.com' }
+    ]
+
+    const iconList = icons.map(({ icon, link }) => (
+        <a href={link} target="_blank" key={icon}>
+            <Icon icon={icon} style={{ marginRight: 20 }} />
+        </a>
     ))
 
     return (

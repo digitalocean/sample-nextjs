@@ -16,6 +16,18 @@ export type ProjectProps = {
 
 export const Project: React.FC = React.memo(
     ({ headerImage, backgroundImageSrc, role, catchDesc, description, caseLink }: ProjectProps): JSX.Element => {
+        const [buttonIsDisabled, setButtonIsDisabled] = React.useState(false)
+        const [inHover, setHover] = React.useState(false)
+
+        React.useEffect(() => {
+            if (inHover) {
+                // If no case link is provided then disable the button.
+                if (!caseLink.length) setButtonIsDisabled(true)
+            }
+        }, [inHover])
+
+        const buttonText = inHover && buttonIsDisabled ? 'Coming Soon' : 'View Case Study'
+        const disabledClass = inHover && buttonIsDisabled ? 'buttonDisabled' : ''
         return (
             <section className={`container ${styles.section}`}>
                 <Image
@@ -39,7 +51,13 @@ export const Project: React.FC = React.memo(
 
                         <p>{description}</p>
 
-                        <Button link={caseLink}>View Case Study</Button>
+                        <Button
+                            onMouseEnter={() => setHover(true)}
+                            onMouseLeave={() => setHover(false)}
+                            className={disabledClass}
+                        >
+                            {buttonText}
+                        </Button>
                     </div>
                     <div></div>
                 </div>

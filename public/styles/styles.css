@@ -381,9 +381,9 @@ button[disabled] {
 }
 
 .buttonDisabled {
-    color: var(--white);
+    color: var(--black);
     background-color: var(--red);
-    border-color: var(--white);
+    border-color: var(--black);
 }
 
 .container {

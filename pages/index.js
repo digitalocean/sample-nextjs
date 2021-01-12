@@ -41,8 +41,8 @@ export default function Home() {
         </svg>
 
         <img
-          src="/background.jpg"
-          alt="Ocean Image"
+          src="/background2.jpg"
+          alt="New Image"
           className="lg:absolute object-cover lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
         />
       </div>

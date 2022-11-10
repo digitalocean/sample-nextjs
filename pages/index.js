@@ -1,3 +1,24 @@
+const mysql = require('mysql');
+var theusername =  process.env.usernameForDB; // "239482"
+var thepassword = process.env.passwordForDB; // "foobar"
+var thehost = process.env.passwordForDB;
+var theport = process.env.passwordForDB;
+
+console.log("edw eimaste ...thehost: " + thehost + " , kai theport:" + theport)
+const connection = mysql.createConnection({
+  host: thehost,
+  user: theusername,
+  password: thepassword,
+  port: theport,
+  database: 'mytrades_all'
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected to MySQL Server!');
+});
+
+
 export default function Home() {
   return (
     <div className="min-h-screen lg:flex text-lg">

@@ -46,8 +46,6 @@ export default function Home() {
           src="background.jpg"
           alt="Ocean Image"
           className="lg:absolute object-cover lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
-          width={1517} /* this is the actual width */
-          height={2700}  /* this is the actual height */
         />
       </div>
     </div>

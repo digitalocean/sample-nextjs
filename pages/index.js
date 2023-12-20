@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <div className="min-h-screen lg:flex text-lg">
@@ -40,10 +42,12 @@ export default function Home() {
           <polygon points="50,0 100,0 50,100 0,100"></polygon>
         </svg>
 
-        <img
-          src="/background.jpg"
+        <Image
+          src="background.jpg"
           alt="Ocean Image"
           className="lg:absolute object-cover lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
+          width={1517} /* this is the actual width */
+          height={2700}  /* this is the actual height */
         />
       </div>
     </div>

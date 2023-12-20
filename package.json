@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build && next export -o _static",
-    "start": "node sammy.js; next start -H 0.0.0.0 -p ${PORT:-8080}"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node sammy.js; next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^10.0.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "eslint-config-next": "^14.0.4",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

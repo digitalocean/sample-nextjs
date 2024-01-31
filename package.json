@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node sammy.js; next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
     "lint": "next lint"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "eslint-config-next": "^14.0.4",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.1"
   }
 }

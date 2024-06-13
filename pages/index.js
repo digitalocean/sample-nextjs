@@ -8,7 +8,7 @@ export default function Home() {
         <h2 className="inter text-4xl mb-3 font-bold text-gray-800">
           Welcome to Your Next.js App{" "}
           <span className="block text-blue-500 text-2xl font-normal">
-            Deployed to DigitalOcean
+            L9-Business-Suite-Front-End
           </span>
         </h2>
 
@@ -46,6 +46,8 @@ export default function Home() {
           src="background.jpg"
           alt="Ocean Image"
           className="lg:absolute object-cover lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
+          width="500"
+          height="600"
         />
       </div>
     </div>

@@ -7,17 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit",
+    "format:write": "prettier --write \"**/*.{js,jsx,mjs,ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{js,jsx,mjs,ts,tsx,mdx}\" --cache"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "eslint-config-next": "^14.0.4",
-    "next": "^14.1.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "serve": "^14.2.1",
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.4",
     "@emotion/server": "11.11.0",
@@ -34,7 +30,10 @@
     "@phosphor-icons/react": "2.0.15",
     "apexcharts": "3.46.0",
     "dayjs": "1.11.10",
+    "next": "14.1.3",
+    "react": "18.2.0",
     "react-apexcharts": "1.4.1",
+    "react-dom": "18.2.0",
     "react-hook-form": "7.51.0",
     "zod": "3.22.4"
   },

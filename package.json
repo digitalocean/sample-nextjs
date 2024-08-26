@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  
   "keywords": [],
   "author": "",
   "dependencies": {

@@ -4,8 +4,8 @@ const nextConfig = {
     output: 'export',
     distDir: "_static",
     images: {
-        unoptimized: true
-    },
+        domains: ['images.unsplash.com', 'assets.aceternity.com', 'pbs.twimg.com','cloud.limelight.sh'],
+      },
 }
 
 module.exports = nextConfig

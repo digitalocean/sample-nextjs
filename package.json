@@ -1,7 +1,7 @@
 {
   "name": "hello-next",
   "version": "1.0.0",
-  "description": "",
+  "description": "This guide describes how to use DigitalOcean App Platform to run a sample Next.js application.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -13,8 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "eslint-config-next": "^15.4.5",
+    "express": "^5.1.0",
     "next": "^15.4.5",
+    "pg": "^8.16.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "serve": "^14.2.4"

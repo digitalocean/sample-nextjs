@@ -1,22 +1,38 @@
 {
   "name": "hello-next",
   "version": "1.0.0",
-  "description": "",
+  "description": "This guide describes how to use DigitalOcean App Platform to run a sample Next.js application.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
-    "lint": "next lint"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/stack": "^7.4.8",
+    "@reduxjs/toolkit": "^2.9.0",
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.2",
     "eslint-config-next": "^15.4.5",
+    "expo-location": "^19.0.7",
+    "expo-notifications": "^0.32.11",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
     "next": "^15.4.5",
+    "pg": "^8.16.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-native-safe-area-context": "^5.6.1",
+    "react-native-screens": "^4.16.0",
+    "react-redux": "^9.2.0",
     "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
